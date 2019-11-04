@@ -2,20 +2,21 @@ class User < ApplicationRecord
   enum role: [:user, :waiter, :admin]
   has_many :tips
   has_one :wallet
-  after_initialize :set_default_initialize
+  # after_initialize :set_def 
 
   after_create :set_defaults
 
+  # def set_def 
+
+  #   set_wallet
+  #   # self.life_period ||= 1800
+  #   # set_default_avatar
+  # end
+
   def set_defaults
-
-    set_wallet
-    # self.life_period ||= 1800
-    # set_default_avatar
-  end
-
-  def set_default_initialize
     set_qr_code
     set_default_avatar
+    set_wallet
   end
 
   def set_default_avatar
