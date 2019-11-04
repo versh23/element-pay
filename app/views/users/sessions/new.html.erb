@@ -1,0 +1,23 @@
+<h2>Log in</h2><h3></h3>
+</br> 
+</br> 
+</br> 
+
+
+
+<%= simple_form_for(@users) do |f| %> 
+
+  <%= f.input :email, label: 'Электронная почта' %>
+  <%= f.input :password, label: 'Пароль' %>
+
+
+
+<br>
+<div class="col s12">
+<div class="right-align">
+<%= f.submit "Войти", class: "waves-effect waves-light btn  deep-purple accent-1"  %>
+
+</div>
+</div>
+
+      <% end %>
