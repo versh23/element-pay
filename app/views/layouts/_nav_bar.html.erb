@@ -5,7 +5,13 @@
 
       <li>
 
-          
+                  <% if current_user != nil %>
+          <%= link_to('Выход', destroy_user_session_path, method: :delete) %>
+        <% else %>
+        <li><a href="/admin">Admin</a></li>
+
+          <li><a href="/users/sign_in">Вход</a></li>
+        <% end %>
         </li>
             
     </ul>
