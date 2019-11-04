@@ -1,0 +1,24 @@
+<nav class=" deep-purple  darken-1" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="/" class="brand-logo left">Element</a>
+    <ul class="right">
+
+      <li>
+        <% if current_user != nil %>
+          <%= link_to('Выход', destroy_user_session_path, method: :delete) %>
+        <% else %>
+        <li><a href="/admin">Admin</a></li>
+
+          <li><a href="/users/sign_in">Вход</a></li>
+        <% end %>
+
+          
+        </li>
+            
+    </ul>
+
+
+  </div>
+</nav>
+
+

@@ -10,6 +10,29 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render 'layouts/nav_bar' %>
+      <main class="grey lighten-5"><br>
+          <div class="container l2"></div>
+
+          <div class="container l6">
+              <div class="card-panel  white">
+                  <span class="black-text">
+                      <%= yield %>
+
+                  </span>
+                </div>
+
+          </div>
+
+
+
+       <div class="container l2"></div>
+
+      </main>
+    <%= render 'layouts/footer_small' %>
+
   </body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
