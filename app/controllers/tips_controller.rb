@@ -33,8 +33,8 @@ class TipsController < ApplicationController
     respond_to do |format|
       if @tip.save
         u = User.find(@tip.user_id)
-        # u.wallet.money = @tip.amount
-        # u.wallet.save!
+        u.wallet.money = @tip.amount
+        u.wallet.save!
         Best2payService.pay(u, @tip.amount)
         # b2=  B2PService.new(@tip.amount)
         # result = Best2payService.send_order

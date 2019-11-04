@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :tips
   get 'tips/new/:user_id', to: 'tips#new'
-  # get 'tips/create/:tip_id', to: 'tips#create'
+  get 'tips/create/:tip_id', to: 'tips#create'
 
   get 'static/account/:user_id', to: 'static#account'
   get 'reviews/new/:id', to: 'reviews#new'
