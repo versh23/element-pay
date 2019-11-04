@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @tip.amount %>
+</p>
+
+<p>
+  <strong>Payment url:</strong>
+  <%= @tip.payment_url %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tip.user %>
+</p>
+
+<%= link_to 'Edit', edit_tip_path(@tip) %> |
+<%= link_to 'Back', tips_path %>

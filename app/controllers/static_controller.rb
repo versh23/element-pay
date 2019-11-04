@@ -6,6 +6,8 @@ class StaticController < ApplicationController
   end
 
   def account
+    @user = User.find(params[:user_id])
+
   end
 
   def offer

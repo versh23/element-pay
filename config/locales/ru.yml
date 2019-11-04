@@ -1,0 +1,26 @@
+ru:
+  activerecord:
+    models:
+      user:
+        one: Официант
+        other: Официант
+      wallet:
+        one: Кошелёк
+        other: Кошельки
+  administrate:
+    user:
+      actions:
+        back: Back
+        confirm: Confirm
+        destroy: Destroy
+        edit: Edit
+        edit_resource: Edit resource
+        new_resource: New resource
+        show_resource: Show resource
+    form:
+      error: Error
+      errors: Errors
+  errors:
+    messages:
+      not_saved: Not saved
+  hello: Hello world
