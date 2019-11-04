@@ -1,0 +1,19 @@
+
+
+
+
+  <%= simple_form_for(@review) do |f| %> 
+
+    <%= f.input :rate, label: 'Оценка', collection: 1..5 %>
+
+    <%= f.input :text, placeholder: "Напишите отзыв", as: :text, label: 'Отзыв' %>
+    <%= f.hidden_field :order %>
+
+    <%= f.hidden_field :tip_id %>
+
+<br>
+    <%= f.submit "Продолжить", class: "waves-effect waves-light btn align-right deep-purple accent-1"  %>
+
+        <% end %>
+
+        

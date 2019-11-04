@@ -4,11 +4,11 @@ class ApiService
 
 	attr_accessor :amount, :reference, :description, :url, :signature, :response, :payment_url
 
-	def initialize(amount,reference = " ",description = " ",  url = "https://app.elementpay.host/reviews/new")
+	def initialize(amount,reference = " ",description = " ",  url )
 		@amount = amount * 100
 		@reference = reference
 		@description = description
-		@url = url
+		@url = "https://app.elementpay.host/reviews/new/#{url}"
 		@signature = signature
 		new_order
 	end

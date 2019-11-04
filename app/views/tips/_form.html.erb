@@ -1,27 +1,22 @@
-<%= form_with(model: tip, local: true) do |form| %>
-  <% if tip.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
 
-      <ul>
-      <% tip.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<%= simple_form_for(@tip) do |f| %> 
+
+  <%= f.input :amount, label: 'Сколько оставить чаевых?' %>
+
+  <%= f.hidden_field :user_id, placeholder: "Напишите отзыв", as: :text, label: 'Отзыв' %>
+
+
+<br>
+<div class="col s12">
+<div class="right-align">
+<%= f.submit "Продолжить", class: "waves-effect waves-light btn  deep-purple accent-1"  %>
+
+</div>
+</div>
+
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.text_field :amount %>
-  </div>
 
 
 
-  <div class="field">
-    <%= form.hidden_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    
+             

@@ -5,7 +5,7 @@
         <div class="row  ">
  
 
-        <div class="col l6 s12 ">
+        <div class="col s6  ">
           <h5 class="white-text">Element</h5>
           <p>
               127560, г.Москва, ул.Коненкова д.12 кв.194 <br>
@@ -14,30 +14,45 @@
           </p>
       </div>
       
-      <div class="col l6 s12 right-align">
-          <h5 class="white-text">Element</h5>
+      <div class="col s6  right-align">
           
               <ul>
+              </br>
+
+                <li>
+                  <span  class="white-text">
+                  <%= link_to 'Соглашение', '/static/offer', class: "white-text" %>
+
+
+                  </span>
+                  
+                </li>
+
+                <li>
+                  <span  class="white-text">
+                  <%= link_to 'Конфиденциальность', '/static/privacy', class: "white-text" %>
+
+                  </span>
+                  
+                </li>
 
 
                 <li>
                   <span  class="white-text">
-                      <%= link_to 'Account', '/static/account/1', class: "white-text" %>
+                  <%= link_to 'Оставить Чаевые', '/tips/new/2', class: "white-text" %>
 
                   </span>
+                  
                 </li>
-                  <li>
-                    <%= link_to 'Оставить Чаевые', '/tips/new/1' %>
+
+             
+                <li>
+                    <%= link_to 'Оценить обслуживание', '/reviews/new',  class: "white-text" %>
                 </li>
                 <li>
-                    <%= link_to 'Оценить обслуживание', '/reviews/new' %>
-                </li>
-                <li>
-                    <%= link_to 'Конфиденциальность', '/static/privacy' %>
 
                 </li>
                 <li>
-                    <%= link_to 'Соглашение', '/static/offer' %>
 
                 </li>
               </ul>

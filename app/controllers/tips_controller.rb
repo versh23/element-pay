@@ -42,7 +42,8 @@ class TipsController < ApplicationController
         # puts 
         tip = @tip.amount.to_i
         ref = "#{@tip.id}TESR"
-        a=ApiService.new(tip,ref)
+        desc = "Чаевые для #{u.email}"
+        a=ApiService.new(tip,ref,"#{desc}",@tip.id)
         id = a.response["order"]["id"]
         a.set_pay_url(id)
         # response = a.new_order
