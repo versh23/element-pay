@@ -1,0 +1,63 @@
+
+
+    <div class="row">
+
+    <div class="col s4">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              <%= image_tag(@user.avatar) %>
+         
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s8">
+                <div class="row">
+          <div class="col s12">
+            <div class="card-panel white center-align">
+              <span class="left-align">
+                <p>Email:  <%= @user.email %>
+                </p>
+                <p>Имя: <%= @user.first_name %></p>
+                <p>Фамилия: <%= @user.last_name %></p>
+                <p>Кошелёк: <%= @user.wallet.money %> руб.</p>
+
+
+              </span>
+            </div>
+          </div>
+        </div>
+      <!-- Promo Content 2 goes here -->
+
+        
+      <!-- Promo Content 3 goes here -->
+    </div>
+
+  </div>
+
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel  center-align">
+      <span class="center-align">
+
+                      <%= image_tag("22.png", size: "400", alt: "Edit Entry") %>
+
+      </span>
+    </div>
+  </div>
+</div>
+        
+
+
+
+
+
+
+  </div>
+
+
+
