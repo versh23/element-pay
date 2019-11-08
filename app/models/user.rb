@@ -5,7 +5,13 @@ class User < ApplicationRecord
   # after_initialize :set_def 
 
   after_create :set_defaults
+  # before_save :set_qr_code
+  def check_wallet
 
+  wallet=self.wallet
+  wallet.amount = self.wallet.amount + amount
+  self.wallet.save
+  end
   # def set_def 
 
   #   set_wallet

@@ -1,22 +1,36 @@
-<h3>Вход</h3>
-</br> 
-</br> 
-</br> 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
+<br><br>
+<h5 class='center orange-text'>Войдите что бы продолжить</h5>
+<br><br>
+<div class='row'>
+  <form class='z-depth-1'>
+    <h5></h5>
+    <div class='row'>
+      <div class='input-field col s12'>
+        <input id='username' type='text' class='validate'>
+        <label for='username'>Логин</label>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='input-field col s12'>
+        <input id='password' type='password' class='validate'>
+        <label for='password'>Пароль</label>
+      </div>
+    </div>
+
+  <div class='row'>
+    <div class='input-field col s12'>
+    <button class='col s12  btn deep-purple accent-3 hoverable' type='submit'>Продолжить</button>
+
+    </div>
   </div>
 
-  <div class="form-actions">
-<div class="right-align">
-<%= f.submit "Войти", class: "waves-effect waves-light btn  deep-purple accent-1"  %>
+    <div class="col s12">&nbsp;</div>
 
-</div>  </div>
-<% end %>
 
+  </form>
+
+</div>
+
+
+<br><br><br>

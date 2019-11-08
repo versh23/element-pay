@@ -1,19 +1,48 @@
 
 
 
-
-  <%= simple_form_for(@review) do |f| %> 
-
-    <%= f.input :rate, label: 'Оценка', collection: 1..5 %>
-
-    <%= f.input :text, placeholder: "Напишите отзыв", as: :text, label: 'Отзыв' %>
-    <%= f.hidden_field :order %>
-
-    <%= f.hidden_field :tip_id %>
-
-<br>
-    <%= f.submit "Продолжить", class: "waves-effect waves-light btn align-right deep-purple accent-1"  %>
-
-        <% end %>
-
         
+
+
+
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="container-fluid">
+          <div class="row">
+  
+      <div class="col s8 offset-s2 white-text card  hoverable">
+          <div class="col s12 center">
+          <h4 class="text-center orange-text light"><small>Оцените обслуживание</small></h4>
+            </div>
+          <div class="divider"></div>  
+          <%= simple_form_for(@review) do |f| %> 
+  
+          <div class="input-field col s12">
+          <%= f.input :rate, label: 'Оценка', placeholder: "В диапазоне от 1 до 5" %>
+  
+          </div>
+          <div class="input-field col s12">
+          <%= f.input :text, placeholder: "Напишите отзыв", as: :text, label: 'Отзыв' %>
+  
+          </div>
+
+          <div class="input-field col s12">
+          <%= f.hidden_field :order %>
+  
+        </div>
+  
+  
+  
+  
+    
+          <div class="col s12">&nbsp;</div>
+          <div class="col s12 center">
+          <%= f.submit "Отправить", class: "col s12 btn deep-purple accent-3 hoverable"  %>
+        
+            </div>
+          <div class="col s12">&nbsp;</div>
+        </div>
+          </div>
+          </div>    
+          <% end %>
+  

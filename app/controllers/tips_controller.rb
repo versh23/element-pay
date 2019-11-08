@@ -32,31 +32,38 @@ class TipsController < ApplicationController
 
     respond_to do |format|
       if @tip.save
-        u = User.find(@tip.user_id)
-        u.wallet.money = @tip.amount
-        u.wallet.save!
-        Best2payService.pay(u, @tip.amount)
-        # b2=  B2PService.new(@tip.amount)
-        # result = Best2payService.send_order
-        # response = OrdersService.parse(result)
-        # puts 
-        tip = @tip.amount.to_i
-        ref = "#{@tip.id}TESR"
-        desc = "Чаевые для #{u.email}"
-        a=ApiService.new(tip,ref,"#{desc}",@tip.id)
-        id = a.response["order"]["id"]
-        a.set_pay_url(id)
-        # response = a.new_order
-        puts a
-        # a.set_pay_url(@tip)
-        format.html { redirect_to  a.payment_url, notice: 'Tip was successfully created.' }
+        make_payment(@tip)
+        response = send_order_to_api(@tip)
+
+
+        format.html { redirect_to response, notice: 'Tip was successfully created.' }
         # format.json { render :show, status: :created, location: @tip }
       else
-        
         format.html { redirect_to root_path }
-        # format.json { render json: @tip.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def send_order_to_api(tip)
+    tips = tip.amount.to_i
+    ref = "#{tip.id}TEST_PAY"
+    user =  User.find(tip.user_id )
+
+    desc = "Чаевые для #{user.email}"
+    a=ApiService.new(tips,ref,"#{desc}",tip.id)
+
+    page =  a.response["order"]["id"]
+    a.set_pay_url(page)
+
+   a.payment_url
+  end
+
+  def make_payment(t)
+    u = User.find(t.user_id)
+    u.wallet.money = t.amount
+    u.wallet.save!
+    # Best2payService.pay(u, @tip.amount)
+# 
   end
 
   # PATCH/PUT /tips/1

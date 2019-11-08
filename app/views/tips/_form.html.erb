@@ -1,22 +1,39 @@
 
-<%= simple_form_for(@tip) do |f| %> 
-
-  <%= f.input :amount, label: 'Сколько оставить чаевых?' %>
-
-  <%= f.hidden_field :user_id, placeholder: "Напишите отзыв", as: :text, label: 'Отзыв' %>
 
 
-<br>
-<div class="col s12">
-<div class="right-align">
-<%= f.submit "Продолжить", class: "waves-effect waves-light btn  deep-purple accent-1"  %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <div class="container-fluid">
+        <div class="row">
 
-</div>
-</div>
+    <div class="col s8 offset-s2 white-text card  hoverable">
+        <div class="col s12 center">
+        <h4 class="text-center orange-text light"><small>Выберите сумму</small></h4>
+          </div>
+        <div class="divider"></div>  
+        <%= simple_form_for(@tip) do |f| %> 
 
-      <% end %>
+        <div class="input-field col s12">
+          <%= f.input :amount, label: 'Сколько оставить чаевых?', autofocus: true %>
+
+        </div>
+        <div class="input-field col s12">
+        <%= f.hidden_field :user_id %>
+
+      </div>
 
 
 
-    
-             
+
+  
+        <div class="col s12">&nbsp;</div>
+        <div class="col s12 center">
+        <%= f.submit "Продолжить", class: "col s12 btn deep-purple accent-3 hoverable"  %>
+
+
+          </div>
+        <div class="col s12">&nbsp;</div>
+      </div>
+        </div>
+        </div>    
+        <% end %>
+

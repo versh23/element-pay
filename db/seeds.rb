@@ -17,7 +17,24 @@ User.create( email: 'test3@elementpay.ru', password: 'testtest')
 User.create( email: 'test4@elementpay.ru', password: 'testtest') 
 User.create( email: 'test5@elementpay.ru', password: 'testtest') 
 User.create( email: 'test6@elementpay.ru', password: 'testtest') 
-
+(0..9).each do |n|
+  User.create( email: "test#{n+1}@elementpay.ru", password: 'testtest') 
+end
   # 'Иван',  'Иванович', 'Иванов'
 
 # )
+
+Payment.create_tips
+
+
+create_sample_wallets
+check_wallets_empty
+tips_possible_for_waier_wallets
+
+When.i_have_correct_params
+
+ 
+
+
+
+
