@@ -37,6 +37,6 @@ config.autoload_paths += Dir["#{Rails.root}/app/services/best2pay"]
 config.autoload_paths += Dir["#{Rails.root}/app/services/best2pay/parsers"]
 
 # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators.system_tests = :rspec
   end
 end

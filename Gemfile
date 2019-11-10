@@ -57,10 +57,10 @@ gem "dry-initializer-rails"
 
 # gem 'rolify'
 gem "rb-readline"
-# gem "administrate-field-password"
+gem "administrate-field-password"
 
 gem "rails-i18n"
-# gem "administrate"
+gem "administrate"
 # gem "rqrcode"
 # gem "inline_svg"
 gem "parser", "2.6.3"

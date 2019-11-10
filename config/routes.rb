@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :orders
+      resources :reviews
+      resources :tips
+      resources :wallets
+
+      root to: "users#index"
+    end
   resources :reviews
   resources :tips
   get 'tips/new/:user_id', to: 'tips#new'
