@@ -13,7 +13,6 @@ class UserDashboard < Administrate::BaseDashboard
     wallet: Field::HasOne,
     id: Field::Number,
     email: Field::String,
-    encrypted_password: Field::String,
     role: Field::String.with_options(searchable: false),
     first_name: Field::String,
     last_name: Field::String,

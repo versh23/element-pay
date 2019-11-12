@@ -55,10 +55,6 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
-    administrate-field-enumerize (1.0.0)
-      administrate (~> 0.8)
-      enumerize (~> 2.1)
-      rails (>= 5.0.0)
     administrate-field-image (1.1.0)
       administrate (>= 0.2.0.rc1)
     administrate-field-password (0.0.4)
@@ -111,8 +107,6 @@ GEM
     dry-initializer-rails (3.1.1)
       dry-initializer (>= 2.4, < 4)
       rails (> 3.0)
-    enumerize (2.3.1)
-      activesupport (>= 3.2)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
@@ -344,7 +338,6 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
-  administrate-field-enumerize
   administrate-field-image
   administrate-field-password
   administrate-field-scoped_belongs_to

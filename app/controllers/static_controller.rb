@@ -1,11 +1,6 @@
 class StaticController < ApplicationController
   def index
-<<<<<<< HEAD
-    
-=======
-    @api=ApiBestPay.new
 
->>>>>>> release/0.5.0
   end
 
   def home
