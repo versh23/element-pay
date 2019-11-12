@@ -1,13 +1,28 @@
+---
 ru:
   activerecord:
     models:
+      tip:
+        one: Чаевые
+        other: Happy Customers
       user:
         one: Официант
-        other: Официант
+        other: Официанты
       wallet:
         one: Кошелёк
         other: Кошельки
   administrate:
+    actions:
+      back: Back
+      confirm: Confirm
+      destroy: Destroy
+      edit: Edit
+      edit_resource: Edit resource
+      new_resource: New resource
+      show_resource: Show resource
+    form:
+      error: Error
+      errors: Errors
     user:
       actions:
         back: Back
@@ -17,9 +32,6 @@ ru:
         edit_resource: Edit resource
         new_resource: New resource
         show_resource: Show resource
-    form:
-      error: Error
-      errors: Errors
   errors:
     messages:
       not_saved: Not saved

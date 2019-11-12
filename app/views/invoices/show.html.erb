@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @invoice.uuid %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @invoice.state %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @invoice.info %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

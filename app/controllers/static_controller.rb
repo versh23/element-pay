@@ -1,8 +1,11 @@
 class StaticController < ApplicationController
   def index
+    @api=ApiBestPay.new
+
   end
 
   def home
+    @api=ApiBestPay.new
   end
 
   def account
@@ -14,5 +17,9 @@ class StaticController < ApplicationController
   end
 
   def privacy
+  end
+
+  def new
+
   end
 end

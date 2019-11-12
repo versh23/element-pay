@@ -1,9 +1,10 @@
+---
 en:
   activerecord:
     models:
       tip:
         one: Чаевые
-        other: Happy Customers    
+        other: Happy Customers
       user:
         one: Happy Customer
         other: Happy Customers
@@ -22,6 +23,15 @@ en:
     form:
       error: Error
       errors: Errors
+    user:
+      actions:
+        back: Back
+        confirm: Confirm
+        destroy: Destroy
+        edit: Edit
+        edit_resource: Edit resource
+        new_resource: New resource
+        show_resource: Show resource
   errors:
     messages:
       not_saved: Not saved

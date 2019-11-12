@@ -1,0 +1,25 @@
+<br>
+<br>
+<%= simple_form_for(@waiter) do |f| %> 
+
+  <%= f.input :reviewed_at,  as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [:month, :year] %>
+  <%= f.input :name, label: 'Имя' %>
+  <%= f.input :price, label: 'Фамилия' %>
+
+
+  <%= f.input :price_in_cents, priority: [ "Brazil" ], collection: [ "Australia", "Brazil", "New Zealand"]
+ %>
+
+<br>
+<div class="col s12">
+<div class="right-align">
+<%= f.submit "Продолжить", class: "waves-effect waves-light btn  deep-purple accent-1"  %>
+
+</div>
+</div>
+
+      <% end %>
+
+
