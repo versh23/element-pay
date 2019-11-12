@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :invoices
+  # resources :invoices
+  # resources :users
+
   get 'payments/new/(:user_id)', to: 'payments#new'
   post 'payments/create'
   get 'payments/result'
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
       resources :reviews
       resources :tips
       resources :wallets
+      # resources :invoices
 
       root to: "users#index"
     end

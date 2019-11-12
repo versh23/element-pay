@@ -9,6 +9,7 @@ class TipDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
+    # author: Field::ScopedBelongsTo.with_options(scope: -> (field) { field.resource.user } ),
     id: Field::Number,
     amount: Field::String,
     payment_url: Field::String,

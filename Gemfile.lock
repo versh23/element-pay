@@ -55,8 +55,15 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
+    administrate-field-enumerize (1.0.0)
+      administrate (~> 0.8)
+      enumerize (~> 2.1)
+      rails (>= 5.0.0)
+    administrate-field-image (1.1.0)
+      administrate (>= 0.2.0.rc1)
     administrate-field-password (0.0.4)
       administrate
+    administrate-field-scoped_belongs_to (0.2.1)
     arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.7.1)
@@ -98,11 +105,14 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.8.2)
       devise (>= 4.6)
+    devise-i18n-views (0.3.7)
     diff-lcs (1.3)
     dry-initializer (3.0.1)
     dry-initializer-rails (3.1.1)
       dry-initializer (>= 2.4, < 4)
       rails (> 3.0)
+    enumerize (2.3.1)
+      activesupport (>= 3.2)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
@@ -333,7 +343,10 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-enumerize
+  administrate-field-image
   administrate-field-password
+  administrate-field-scoped_belongs_to
   awesome_print
   bootsnap
   byebug
@@ -342,6 +355,7 @@ DEPENDENCIES
   database_cleaner
   devise
   devise-i18n
+  devise-i18n-views
   dry-initializer-rails
   factory_bot_rails
   figaro

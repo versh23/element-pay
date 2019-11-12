@@ -5,7 +5,7 @@ class StaticController < ApplicationController
   end
 
   def home
-    @api=ApiBestPay.new
+    @user = User.new
   end
 
   def account
@@ -22,4 +22,5 @@ class StaticController < ApplicationController
   def new
 
   end
+
 end

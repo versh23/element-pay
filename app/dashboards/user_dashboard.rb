@@ -9,6 +9,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     tips: Field::HasMany,
+    password: Field::Password,
     wallet: Field::HasOne,
     id: Field::Number,
     email: Field::String,
@@ -25,7 +26,7 @@ class UserDashboard < Administrate::BaseDashboard
     persondoc_issby: Field::String,
     address: Field::String,
     client_ref: Field::String,
-    avatar: Field::String,
+    avatar: Field::Image,
     qr_code: Field::String,
     wallet_funds: Field::String,
     reset_password_token: Field::String,
@@ -45,6 +46,7 @@ class UserDashboard < Administrate::BaseDashboard
   wallet
   id
   email
+  avatar
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -52,7 +54,6 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
   tips
   wallet
-  id
   email
   first_name
   last_name
@@ -67,20 +68,14 @@ class UserDashboard < Administrate::BaseDashboard
   client_ref
   avatar
   qr_code
-  wallet_funds
-  reset_password_token
-  reset_password_sent_at
-  remember_created_at
-  created_at
-  updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  tips
   email
+  password
   first_name
   last_name
   patronymic
