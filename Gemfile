@@ -12,7 +12,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
-gem 'jquery-datatables'
+# gem 'jquery-datatables'
 
 gem "bootsnap" #, '>= 1.1.0', require: false
 
@@ -46,10 +46,10 @@ gem "simple_form"
 
 
 gem "devise"
-gem "devise-i18n"
+# gem "devise-i18n"
 
 gem "i18n_generators"
-gem "i18n-tasks"
+# gem "i18n-tasks"
 
 # gem 'dry-types'
 # gem 'dry-struct'
