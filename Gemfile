@@ -61,7 +61,7 @@ gem "rb-readline"
 gem "administrate-field-password"
 gem 'administrate-field-scoped_belongs_to'
 # gem 'administrate-field-enumerize'
-gem 'administrate-field-image'
+# gem 'administrate-field-image'
 gem 'devise-i18n-views'
 
 # gem 'administrate-field-file_upload'
