@@ -9,7 +9,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     tips: Field::HasMany,
-    password: Field::Password,
+    password: Field::String,
     wallet: Field::HasOne,
     id: Field::Number,
     email: Field::String,
