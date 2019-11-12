@@ -55,8 +55,6 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
-    administrate-field-image (1.1.0)
-      administrate (>= 0.2.0.rc1)
     administrate-field-password (0.0.4)
       administrate
     administrate-field-scoped_belongs_to (0.2.1)
@@ -338,7 +336,6 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
-  administrate-field-image
   administrate-field-password
   administrate-field-scoped_belongs_to
   awesome_print
