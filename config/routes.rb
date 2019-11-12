@@ -1,6 +1,25 @@
 Rails.application.routes.draw do
+  # resources :invoices
+  # resources :users
+
+  get 'payments/new/(:user_id)', to: 'payments#new'
+  post 'payments/create'
+  get 'payments/result'
+    get 'waiters', to: 'payments#result'
+
+  namespace :admin do
+      resources :users
+      resources :orders
+      resources :reviews
+      resources :tips
+      resources :wallets
+      # resources :invoices
+
+      root to: "users#index"
+    end
   resources :reviews
   resources :tips
+
   get 'tips/new/:user_id', to: 'tips#new'
   get 'tips/create/:tip_id', to: 'tips#create'
 
