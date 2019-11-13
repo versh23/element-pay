@@ -8,7 +8,11 @@ class StaticController < ApplicationController
   end
 
   def account
+    if params[:user_id] != nil
     @user = User.find(params[:user_id])
+  else
+    current_user
+  end
 
   end
 

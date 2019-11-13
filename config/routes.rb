@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # resources :invoices
   # resources :users
+  
 
   get 'payments/new/(:user_id)', to: 'payments#new'
   post 'payments/create'

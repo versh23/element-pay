@@ -1,30 +1,27 @@
 class User < ApplicationRecord
-  enum role: [:user, :waiter, :admin]
+  enum role: [:user, :waiter, :restaurant, :manager, :admin]
   has_many :tips
   has_one :wallet
-<<<<<<< HEAD
-  # after_initialize :set_def 
+  after_initialize :set_default_avatar 
 
   after_create :set_defaults
   # before_save :set_qr_code
-  def check_wallet
+  # def check_wallet
 
-  wallet=self.wallet
-  wallet.amount = self.wallet.amount + amount
-  self.wallet.save
-=======
-  before_create :set_default_initialize
-  # after_initialize :set_default_avatar
-  after_save :set_qr_code
+  # wallet=self.wallet
+  # wallet.amount = self.wallet.amount + amount
+  # self.wallet.save
+  # before_create :set_default_initialize
+  # # after_initialize :set_default_avatar
+  # after_save :set_qr_code
 
-  def set_defaults
-    # set_qr_code
-    # set_default_avatar
-    # set_wallet
-    # self.life_period ||= 1800
-    # set_default_avatar
->>>>>>> release/0.5.0
-  end
+  # def set_defaults
+  #   # set_qr_code
+  #   # set_default_avatar
+  #   # set_wallet
+  #   # self.life_period ||= 1800
+  #   # set_default_avatar
+  # end
   # def set_def 
 
   #   set_wallet
@@ -35,16 +32,13 @@ class User < ApplicationRecord
   def set_defaults
     set_qr_code
     set_default_avatar
-<<<<<<< HEAD
-    set_wallet
-=======
         set_wallet
 
->>>>>>> release/0.5.0
   end
 
   def set_default_avatar
     self.avatar = "https://dummyimage.com/300x300/4d4d4d/fff&text=avatar"
+    self.save
   end
 
   def set_qr_code

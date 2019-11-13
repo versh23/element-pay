@@ -25,7 +25,7 @@ class UserDashboard < Administrate::BaseDashboard
     persondoc_issby: Field::String,
     address: Field::String,
     client_ref: Field::String,
-    avatar: Field::Image,
+    avatar: Field::String,
     qr_code: Field::String,
     wallet_funds: Field::String,
     reset_password_token: Field::String,

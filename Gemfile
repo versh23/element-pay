@@ -60,7 +60,7 @@ gem "dry-initializer-rails"
 gem "rb-readline"
 
 # gem 'administrate-field-enumerize'
-# gem 'administrate-field-image'
+gem 'administrate-field-image'
 gem "rails-i18n"
 gem "administrate"
 # gem "rqrcode"

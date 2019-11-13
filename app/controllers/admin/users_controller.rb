@@ -27,7 +27,10 @@ module Admin
     #    resource_class.with_less_stuff
     #  end
     # end
-
+    def update
+      params[:user].delete(:password) if params[:user][:password].blank?
+      super
+    end
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
   end

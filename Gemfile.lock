@@ -55,6 +55,8 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
+    administrate-field-image (1.1.0)
+      administrate (>= 0.2.0.rc1)
     arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.7.1)
@@ -314,6 +316,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-image
   awesome_print
   bootsnap
   byebug

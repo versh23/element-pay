@@ -1,7 +1,19 @@
-<h2><%= t('.sign_up', :default => "Sign up") %></h2>
+<br><br>
+<h5 class='center orange-text'>Регистрация</h5>
+<br><br>
+
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+
+  <div><%= f.label :first_name %><br />
+  <%= f.text_field :first_name %></div>
+
+    <div><%= f.label :last_name %><br />
+  <%= f.text_field :last_name %></div>
+
+  <div><%= f.label :patronymic %><br />
+  <%= f.text_field :patronymic %></div>
+
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -11,8 +23,18 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
+<br /><br />
 
-  <div><%= f.submit t('.sign_up', :default => "Sign up") %></div>
+
+
+
+
+  <div><%= f.submit  "Зарегистрироваться", class:  "сутеук col s12  btn deep-purple accent-3 hoverable"%></div>
+  <div><br />
+
+  <br /><br /><br /><br />
+  <%= render "devise/shared/links" %>
+</div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <%=  devise_error_messages! %>
